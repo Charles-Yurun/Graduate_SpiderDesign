@@ -10,9 +10,9 @@ from manager.work import WorkManager
 
 def register_leancloud():
     monkey.patch_all()
-    leancloud.init(app_id='Xmh3GP4wHdgz4jPVpaW6jQYM-gzGzoHsz',
-                   app_key='xBmSvfdpXxBkgDhjJuqqBIWW',
-                   master_key='j8VdYDUkWaKGTirQQrKsFeUC')
+    leancloud.init(app_id='',
+                   app_key='',
+                   master_key='')
 
 
 def thread_factory(manager_object, base_url, thread_name):
