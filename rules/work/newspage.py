@@ -1,5 +1,6 @@
 # coding: UTF-8
 import re
+import datetime
 
 from bs4 import BeautifulSoup, Tag
 from HTMLParser import HTMLParseError
@@ -56,6 +57,6 @@ class NewsPage:
 
     def news_all(self, news):
         news['news_title'] = self.news_title().encode('utf8')
-        news['news_time'] = self.news_time().encode('utf8')
-        news['news_content'] = self.news_content().encode('utf8')
+        news['news_time'] =datetime.datetime.strptime(self.news_time().encode('utf8'), "%Y/%m/%d %H:%M")
+        news['news_content'] =self.news_content().encode('utf8')
         return news

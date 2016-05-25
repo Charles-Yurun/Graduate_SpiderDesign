@@ -10,11 +10,11 @@ class WorkDB:
             self.work.set(k, v)
 
     def save(self):
-        try:
-            self.work.save()
-        except:
-            print "Read time Out ---------------------------------------"
-            self.save()
+        # try:
+        self.work.save()
+        # except:
+        #     print "Read time Out ---------------------------------------"
+        #     self.save()
 
     def delete(self):
         pass

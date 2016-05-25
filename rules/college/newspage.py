@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 import re
+import datetime
 
 from bs4 import BeautifulSoup, NavigableString, Tag
 from HTMLParser import HTMLParseError
@@ -12,7 +13,10 @@ class NewsPage:
         self.soup_parser = BeautifulSoup(html_content, 'html5lib')
 
     def news_title(self):
-        news_title = self.soup_parser.find('td', class_='newsTitle').string.strip()
+        try:
+            news_title = self.soup_parser.find('td', class_='newsTitle').string.strip()
+        except:
+            return None
         if news_title is None:
             print 'the news title is miss'
             return None
@@ -53,6 +57,6 @@ class NewsPage:
 
     def news_all(self, news):
         news['news_title'] = self.news_title().encode('utf8')
-        news['news_time'] = self.news_time().encode('utf8')
+        news['news_time'] = datetime.datetime.strptime(self.news_time().encode('utf8'), '%Y-%m-%d %H:%M')
         news['news_content'] = self.news_content().encode('utf8')
         return news

@@ -54,6 +54,7 @@ class BaseManger:
                     if not self.news_content_by_list(news_list):
                         break
                     news_next_url = news_list_source.find_news_next_page(self.base_url)
+                    time.sleep(5)
                 else:
                     break
             print 'sleep 300s current_thread name is %s' % threading.current_thread().getName()

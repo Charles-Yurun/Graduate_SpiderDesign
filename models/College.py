@@ -10,7 +10,7 @@ class College(Object):
 
     @news_time.setter
     def news_time(self, value):
-        return self.set('news_time', value)
+        self.set('news_time', value)
 
     @property
     def news_url(self):
@@ -18,7 +18,7 @@ class College(Object):
 
     @news_url.setter
     def news_url(self, value):
-        return self.set('news_url', value)
+        self.set('news_url', value)
 
     @property
     def news_title(self):
@@ -26,7 +26,7 @@ class College(Object):
 
     @news_title.setter
     def news_title(self, value):
-        return self.set('news_title', value)
+        self.set('news_title', value)
 
     @property
     def news_content(self):
@@ -34,7 +34,7 @@ class College(Object):
 
     @news_content.setter
     def news_content(self, value):
-        return self.set('news_content', value)
+        self.set('news_content', value)
 
     @property
     def news_type(self):
@@ -42,7 +42,7 @@ class College(Object):
 
     @news_type.setter
     def news_type(self, value):
-        return self.set('news_type', value)
+        self.set('news_type', value)
 
     @property
     def news_attachment(self):
@@ -50,7 +50,7 @@ class College(Object):
 
     @news_attachment.setter
     def news_attachment(self, value):
-        return self.set('news_attachment', value)
+        self.set('news_attachment', value)
 
     @property
     def news_other(self):
@@ -58,4 +58,4 @@ class College(Object):
 
     @news_other.setter
     def news_other(self, value):
-        return self.set('news_other', value)
+        self.set('news_other', value)
